@@ -1,0 +1,22 @@
+<div id="netchart"></div>
+<script>
+var nc = new NetChart({
+    container: document.getElementById("netchart"),
+    area: { height: 350 },
+    data: {
+        preloaded: {
+            nodes: [
+                { id: "foo" },
+                { id: "bar" },
+                { id: "baz" }
+            ],
+            links: [
+                { id: "foo-bar", from: "foo", to: "bar" },
+                { id: "bar-baz", from: "bar", to: "baz" },
+                { id: "baz-foo", from: "baz", to: "foo" }
+            ]
+        }
+    },
+    interaction: { selection: { lockNodesOnMove: false } }
+});
+</script>
